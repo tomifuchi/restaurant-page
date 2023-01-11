@@ -67,6 +67,21 @@
     @import url('https://fonts.googleapis.com/css?family=#{$font}');
 }
 
+//Or use this to host your own font
+//Example
+//@font-face{
+//    font-family: westmeath;
+//    src: url('./font/Westmeath.ttf')
+//}
+//
+//@font-face{
+//    font-family: westmeath;
+//    src: url('./font/Westmeath\ Italic.ttf');
+//    font-style: italic;
+//}
+
+
+
 //Font awesome icon since it's ussage is very easy, but
 //it require a cdn, you can take time to set it up
 //or use cdnjs, paste this to head of html file then use as normal
