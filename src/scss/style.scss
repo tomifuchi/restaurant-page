@@ -3,32 +3,41 @@
 
 //Body
 body {
-    background-color: $main-background-pink;
+    background-color: $main-color-pearl-white;
     font-size: $font-size;
+
+    font-family: 'Sacramento', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    //font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+//Links text color
+a {
+    color: black;
 }
 
 //Header
 header {
-    * {
-        margin: 0 auto;
+    font-size: 1.7rem;
+    font-weight: 600;
+    border: 1px solid #000;
+    nav {
+        padding: 1em 0;
+        
+        .img-wraper{
+            @include flex($justify: center, $align: center);
+        }
+        img {
+            width: 80%;
+            height: 80%;
+        }
     }
-    font-family: 'Sacramento', Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2.3rem;
-}
-
-nav {
-    @include content-wraper($max-width: 1440px);
-    padding: 1em 0;
-    border-radius: 0 0 20px 20px;
-    background-color: $main-color-white;
 }
 
 nav ul {
-    @include flex($justify:center, $align: center);
+    @include flex($justify: center, $align: center, $wrap: wrap);
     gap: 20px;
 
     a {
-        color: $secondary-color-black;
         position: relative;
     }
 
@@ -45,15 +54,162 @@ nav ul {
         transform: scaleX(0);
     }
 
+    //Hovering effect
     a:hover::after {
-        transition: 200ms;
+        transition: 150ms;
         transform: scale(100%);
-        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* Main section */
+%split-5050-JusAligItemsCenter {
+    @include grid($column: repeat(auto-fit, minmax(200px, 1fr)));
+    align-items: center;
+    justify-items: center;
+}
+/** Hero **/
+.hero {
+    @extend %split-5050-JusAligItemsCenter;
+   border: 1px solid #000;
+
+    //background-color: #e5e5f7;
+    //opacity: 0.8;
+    //background: repeating-linear-gradient( -45deg, #E55982, #E55982 5px, #e5e5f7 5px, #e5e5f7 25px );
+    //color: $font-color-light;
+    //padding: 2em 3em;
+
+    font-size: 2rem;
+    line-height: 1.25;
+    word-spacing: 2px;
+    //text-shadow: 1px 3px 3px rgba(0, 0, 0, 0.3);
+    .hero-deal {
+        border: 1px solid #000;
+        h2 {
+            font-weight: 700;
+        }
+        button {
+            margin-top: 20px;
+            padding: .5em 2em;
+            border-radius: 30px;
+            border: none;
+            //color: $font-color-dark;
+            //box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.1);
+        }
+        //background-color: lighten($main-hero-background,5%);
+        padding: 40px;
     }
 
-    a:hover, a:hover::after {
-        text-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+    .hero-img {
+        border: 1px solid #000;
+        .img-wraper {
+            //width: fit-content;
+        }
     }
 
+    //The deal
+    .strawberry {
+    }
 
+    /*
+    .rainbow {
+       background: -webkit-linear-gradient(
+            45deg,
+            rgba(255, 0, 0, 1) 0%,
+            rgba(255, 154, 0, 1) 10%,
+            rgba(208, 222, 33, 1) 20%,
+            rgba(79, 220, 74, 1) 30%,
+            rgba(63, 218, 216, 1) 40%,
+            rgba(47, 201, 226, 1) 50%,
+            rgba(28, 127, 238, 1) 60%,
+            rgba(95, 21, 242, 1) 70%,
+            rgba(186, 12, 248, 1) 80%,
+            rgba(251, 7, 217, 1) 90%,
+            rgba(255, 0, 0, 1) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    */
+}
+
+/** Recommend **/
+.recommend {
+    //background-color: lighten($color-blue,10%);
+    border: 1px solid #000;
+    &-title{
+        font-style: italic;
+        text-align: center;
+        padding: 1em;
+
+        h3 {
+            font-size: 1.8rem;
+            text-decoration: underline;
+        }
+        p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+    }
+
+    &-item-list{
+        @include grid($column: repeat(auto-fill, minmax(200px,1fr))); 
+        gap: 10px;
+        border: 1px solid #000;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    &-item {
+        a {
+            @include flex($direction: column, $align: center);
+            border: 1px solid #000;
+            button {
+
+                width: 50%;
+                padding: 0.5em 1em;
+            }
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+}
+
+
+/** Location picker **/
+
+.location-picker{
+    @extend %split-5050-JusAligItemsCenter;
+    border: 1px solid #000;
+    %-tidesc{
+        width: 80%;
+    }
+    p {
+        font-size: 2rem;
+        line-height: 1.25;
+        word-spacing: 2px;
+ 
+ 
+    }
+}
+
+/** About **/
+.about {
+    @extend %split-5050-JusAligItemsCenter;
+    border: 1px solid #000;
+    &-tidesc{
+        width: 80%;
+    }
+    p {
+        font-size: 2rem;
+        line-height: 1.25;
+        word-spacing: 2px;
+    }
+}
+
+//Footer
+footer {
+    @extend %split-5050-JusAligItemsCenter;
+    border: 1px solid #000;
 }

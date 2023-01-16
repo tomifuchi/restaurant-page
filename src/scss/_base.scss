@@ -9,15 +9,43 @@ $font-size: 16px; //Either this or use rem
     font-weight: normal;
 }
 
+//Noti emoji font
+@font-face {
+    font-family: 'NotoColorEmoji';
+    src: url('./font/NotoEmoji-VariableFont_wght.ttf') format('truetype');
+}
+
 $font-family-sacramento: 'Sacramento';
 
 //Color scheme
+$font-color-light: #F0F8FB;
+$font-color-dark: #4E4B51;
+
+$main-hero-background: #E55982;
+$color-blue: #8bb1dc;
+$color-grey: #776d6d;
+$color-purple: #47388e;
+$color-brown: #EFD2A8;
+
 $main-color-white: white;
+$main-color-pearl-white: #f8f6f0;
 $main-background-pink: pink;
 
 $secondary-color-black: black;
 
 //General resets
-ul, ul li, a{
+ul, ul li, a, h3, p{
     @extend %reset-margin-padding;
+}
+
+//Images 
+img {
+    width: 100%;
+    height: 100%;
+}
+
+//Icon
+.icon {
+    font-family: 'NotoColorEmoji';
+    color: black;
 }
