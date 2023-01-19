@@ -1,0 +1,3 @@
+export const locationPage = document.createRange().createContextualFragment(`
+<section class="location"><h3>Come and join us at these location</h3><ul class="location-list"><li class="location-list-item"><div class="img-wraper"><!--img--></div><h3>Address 123 at 345 Ave</h3><p>Phone number 1234-5678-90</p></li><li class="location-list-item"><div class="img-wraper"><!--img--></div><h3>Address 5789 at 345/21 Ave</h3><p>Phone number 1234-1118-90</p></li><li class="location-list-item"><div class="img-wraper"><!--img--></div><h3>Address 992 Mk Road</h3><p>Phone number 2214-5118-70</p></li></ul></section>
+`);

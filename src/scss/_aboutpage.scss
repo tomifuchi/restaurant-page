@@ -1,0 +1,10 @@
+.about-inner {
+    @extend %center-message;
+
+    &-container {
+        @extend %center-message-container;
+        h1 {
+            text-decoration: underline;
+        }
+    }
+}

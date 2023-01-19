@@ -1,0 +1,46 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title 
+            = htmlWebpackPlugin.options.title
+    body
+        header
+            nav
+                ul
+                    //This can be a button, this home here
+                    li#home Home
+                    li#location Location
+                    //li 
+                    //    a(href="index.html")
+                    //        .img-wraper
+                    //            //img(src=require("../img/logo.png"), alt="Logo of Kaf'n'Dunk donut and coffee shop", srcset="")
+                    li#membership Membership
+                    li#about About
+        main#content
+
+        footer
+            //Logo and social medias
+            .footer-left-side
+                .img-wraper
+                    //img(src=require('../img/logo.png'), alt="", srcset="")
+            //right side navgation menu
+            .footer-right-side
+              ul
+                  li 
+                      a(href="index.html") Home 
+                  li 
+                      a(href="#") Menu
+                  li
+                      a(href="#") Location
+                  li
+                      a(href="#") Membership
+                  li
+                      a(href="about.html") About
+                  li 
+                      a(href="#") Employment
+                  li 
+                      a(href="#") Contact
+        div(style="text-align: center;") Created by Tomifuchi

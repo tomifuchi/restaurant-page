@@ -4,10 +4,10 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     mode: "development",
     entry: {
-        index: "./src/index.js",
+        index: './src/js/index.js',
     },
     output: {
-        filename: "main.js",
+        filename: 'main.js',
         path: path.resolve(__dirname, "dist"),
         clean: true,
     }, 
@@ -16,9 +16,9 @@ module.exports = {
         new htmlWebpackPlugin({
             title: "Restaurant page",
             filename: "index.html",
-            template: "src/template.pug",
+            template: "src/pug/index.pug",
         }),
-    ],
+   ],
     module: {
         rules: [
             //Images

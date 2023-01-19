@@ -1,0 +1,3 @@
+export const aboutPage = document.createRange().createContextualFragment(`
+<section class="about-inner"><div class="about-inner-container"><h1>About us</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab vitae molestias expedita rem error recusandae quis, facere culpa suscipit inventore minus deserunt maiores sit, reiciendis quae accusantium quidem, commodi fugit.</p><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit magnam, totam soluta nam, architecto ex nulla, deserunt odit voluptatum hic possimus vel nihil voluptas minus laboriosam quidem vero amet dolorum!</p></div></section>
+`);
