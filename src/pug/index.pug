@@ -10,37 +10,24 @@ html(lang="en")
         header
             nav
                 ul
-                    //This can be a button, this home here
-                    li#home Home
-                    li#location Location
-                    //li 
-                    //    a(href="index.html")
-                    //        .img-wraper
-                    //            //img(src=require("../img/logo.png"), alt="Logo of Kaf'n'Dunk donut and coffee shop", srcset="")
-                    li#membership Membership
-                    li#about About
+                    li(data-home)
+                        a Home
+                    li(data-location)
+                        a Location
+                    li(data-membership)
+                        a Membership
+                    li(data-about)
+                        a About
         main#content
 
         footer
-            //Logo and social medias
-            .footer-left-side
-                .img-wraper
-                    //img(src=require('../img/logo.png'), alt="", srcset="")
-            //right side navgation menu
-            .footer-right-side
-              ul
-                  li 
-                      a(href="index.html") Home 
-                  li 
-                      a(href="#") Menu
-                  li
-                      a(href="#") Location
-                  li
-                      a(href="#") Membership
-                  li
-                      a(href="about.html") About
-                  li 
-                      a(href="#") Employment
-                  li 
-                      a(href="#") Contact
+             ul
+                  li(data-home)
+                      a Home 
+                  li(data-location)
+                      a Location
+                  li(data-membership)
+                      a Membership
+                  li(data-about)
+                      a About
         div(style="text-align: center;") Created by Tomifuchi

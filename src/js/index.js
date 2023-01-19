@@ -2,7 +2,7 @@ import '../scss/style.scss';
 import { homePage } from './home_page.js';
 import { aboutPage } from './about_page.js';
 import { membershipPage } from './membership_page';
-import {locationPage } from './location_page';
+import { locationPage } from './location_page';
 
 const contentDiv = document.getElementById('content');
 
@@ -14,9 +14,11 @@ const contentPages = [
 ]
 
 contentPages.forEach(page => {
-    document.getElementById(page.tag).addEventListener('click', () => {
+    document.querySelectorAll(`[data-${page['tag']}]`).forEach(node => {
+        node.addEventListener('click', () => {
         clearContent();
-        contentDiv.appendChild(page.content());
+        contentDiv.appendChild(page['content']());
+        });
     });
 });
 
@@ -26,4 +28,4 @@ function clearContent () {
     });
 }
 
-contentDiv.appendChild(homePage);
+contentDiv.appendChild(homePage());

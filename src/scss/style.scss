@@ -38,6 +38,10 @@ nav ul {
     @include flex($justify: center, $align: center, $wrap: wrap);
     gap: 20px;
 
+    li, a {
+        cursor: pointer;
+    }
+
     a {
         position: relative;
     }
@@ -118,6 +122,10 @@ footer {
             ul {
                 @include flex($justify: center, $wrap: wrap);
                 gap: 20px;
+            }
+
+            li,a {
+                cursor: pointer;
             }
         }
     }
