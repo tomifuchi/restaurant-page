@@ -105,28 +105,36 @@ button {
 //=========================
 //Footer
 footer {
-    @extend %split-5050-JusAligItemsCenter;
     border: 1px solid #000;
     padding: 5em 1em;
-    .footer {
-        &-left-side{
-            .img-wraper{
-                @include flex($justify: center, $align: center);
-            }
-            img {
-                width: 80%;
-                height: 80%;
-            }
+    font-size: 1.3rem;
+    ul {
+        @include flex($justify: center, $align: center, $wrap: wrap);
+        gap: 20px;
+        li,a {
+            cursor: pointer;
         }
-        &-right-side{
-            ul {
-                @include flex($justify: center, $wrap: wrap);
-                gap: 20px;
-            }
 
-            li,a {
-                cursor: pointer;
-            }
+        a{ 
+            position: relative;
+        }
+        //The underline effect
+        a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            width: 100%;
+            border-bottom: 1px solid #000;
+            transform: scaleX(0);
+        }
+
+        //Hovering effect
+        a:hover::after {
+            transition: 150ms;
+            transform: scale(100%);
         }
     }
 }
