@@ -36,6 +36,7 @@ header {
 nav ul {
     border: 1px solid #000;
     @include flex($justify: center, $align: center, $wrap: wrap);
+    padding: 0 10px;
     gap: 20px;
 
     li, a {
